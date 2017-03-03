@@ -1,7 +1,8 @@
-from core.translator import translator
+from core.translator import Translator
 import re
 
-class extrapolator(translator):
+
+class Extrapolator(Translator):
     @classmethod
     def is_letters(self, string):
         for letter in string:
@@ -19,7 +20,7 @@ class extrapolator(translator):
     def extrapolate_literally(self, string):
         if len(string) == 1 or not self.is_letters(string):
             return "literally \"" + string + "\""
-        return "raw \"" + self.letter + "{" + str(len(string)) + "}\""
+        return "raw \"(" + self.letter + "{" + str(len(string)) + "})\""
 
     @classmethod
     def extrapolate(self, tree):

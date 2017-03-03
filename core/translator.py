@@ -1,6 +1,7 @@
 from srl import SRL
 
-class translator:
+
+class Translator:
     @classmethod
     def to_srl(self, tree):
         return self.srl_capture(self.translate_to_srl(tree))

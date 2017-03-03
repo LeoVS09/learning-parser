@@ -1,4 +1,5 @@
-class builder:
+
+class Builder:
     @classmethod
     def tree(self, data):
         return self.clear_tree(self.build_branch(data))
